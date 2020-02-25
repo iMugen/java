@@ -1,0 +1,4 @@
+tk\mybatis\mapper\model\Emp.class
+tk\mybatis\mapper\mapper\EmpMapper.class
+tk\mybatis\mapper\model\Stu.class
+tk\mybatis\mapper\mapper\StuMapper.class
