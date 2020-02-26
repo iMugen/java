@@ -15,7 +15,8 @@
         <property name="runner" ref="runner"></property>
     </bean>
 
-    <!--配置QueryRunner-->
+    <!--配置QueryRunner，默认是单例的，有多个dao使用同一个对象，可能一个在用而另一个还没用完，导致线程互相干扰。
+    设置scope为prototype，每次都创建新的对象-->
     <bean id="runner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">
         <!--注入数据源-->
         <constructor-arg name="ds" ref="dataSource"></constructor-arg>

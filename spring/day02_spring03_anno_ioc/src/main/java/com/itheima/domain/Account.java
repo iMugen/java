@@ -1,14 +1,46 @@
 package com.itheima.domain;
 
-import lombok.Data;
+import java.io.Serializable;
 
 /**
- * @author Gakki
- * @date 2018/12/20 - 11:04
+ * 账户的实体类
  */
-@Data
-public class Account {
+public class Account implements Serializable {
+
     private Integer id;
     private String name;
-    private float money;
+    private Float money;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Float getMoney() {
+        return money;
+    }
+
+    public void setMoney(Float money) {
+        this.money = money;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", money=" + money +
+                '}';
+    }
 }

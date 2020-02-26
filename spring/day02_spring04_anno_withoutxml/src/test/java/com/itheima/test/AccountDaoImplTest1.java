@@ -1,15 +1,11 @@
 package com.itheima.test;
 
-import config.SpringConfiguration;
 import com.itheima.domain.Account;
 import com.itheima.service.AccountService;
-import org.junit.After;
-import org.junit.Before;
+import config.SpringConfiguration;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -21,7 +17,7 @@ import java.util.List;
  */
 @RunWith( SpringJUnit4ClassRunner.class )
 @ContextConfiguration( classes = SpringConfiguration.class )
-public class AccountDaoImplTest {
+public class AccountDaoImplTest1 {
 
     @Autowired
     private AccountService as;

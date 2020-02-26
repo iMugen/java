@@ -1,37 +1,32 @@
 package com.itheima.test;
 
 import com.itheima.domain.Account;
-import com.itheima.service.AccountService;
-import org.junit.After;
-import org.junit.Before;
+import com.itheima.service.IAccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 /**
+ * xml用locations
+ * 注解用
  * @author Gakki
- * @date 2018/12/20 - 11:43
  */
 @RunWith( SpringJUnit4ClassRunner.class )
 @ContextConfiguration( locations = "classpath:applicationContext.xml" )
 public class AccountDaoImplTest {
 
     @Autowired
-    private AccountService as;
+    private IAccountService as;
 
 
     @Test
     public void findAll() {
         //3.执行方法
-        List<Account> accounts = as.findAll();
+        List<Account> accounts = as.findAllAccount();
         for (Account account : accounts) {
             System.out.println(account);
         }
@@ -46,8 +41,7 @@ public class AccountDaoImplTest {
     public void saveAccount() {
         Account account = new Account();
         account.setName("Jin");
-        account.setMoney(124);
-
+        account.setMoney(124f);
         as.saveAccount(account);
     }
 
@@ -59,8 +53,9 @@ public class AccountDaoImplTest {
     @Test
     public void updateAccount() {
         Account account = as.findAccountById(5);
-        account.setMoney(125);
-
+        account.setMoney(125f);
         as.updateAccount(account);
     }
+
+
 }
