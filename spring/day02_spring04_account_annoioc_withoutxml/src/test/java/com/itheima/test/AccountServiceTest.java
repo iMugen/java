@@ -10,6 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * 使用Junit单元测试：测试我们的配置
@@ -35,10 +36,11 @@ public class AccountServiceTest {
     @Test
     public void testFindAll() {
         //3.执行方法
-        List<Account> accounts = as.findAllAccount();
-        for(Account account : accounts){
-            System.out.println(account);
-        }
+//        List<Account> accounts = as.findAllAccount();
+//        for(Account account : accounts){
+//            System.out.println(account);
+//        }
+        Stream.of(as.findAllAccount()).forEach(System.out::println);
     }
 
     @Test

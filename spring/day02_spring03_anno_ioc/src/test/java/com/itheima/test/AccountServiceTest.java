@@ -7,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * 使用Junit单元测试：测试我们的配置
@@ -20,10 +22,11 @@ public class AccountServiceTest {
         //2.得到业务层对象
         IAccountService as = ac.getBean("accountService",IAccountService.class);
         //3.执行方法
-        List<Account> accounts = as.findAllAccount();
-        for(Account account : accounts){
-            System.out.println(account);
-        }
+//        List<Account> accounts = as.findAllAccount();
+//        for(Account account : accounts){
+//            System.out.println(account);
+//        }
+        Stream.of(as.findAllAccount()).forEach(System.out::println);
     }
 
     @Test
