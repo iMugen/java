@@ -51,7 +51,7 @@ public class TransactionManager {
     public  void release(){
         try {
             connectionUtils.getThreadConnection().close();//还回连接池中
-            connectionUtils.removeConnection();
+            connectionUtils.removeConnection();//把连接还回连接池之后，获得的连接已经不能用了，所以还需要解绑以便重新获取新的连接
         }catch (Exception e){
             e.printStackTrace();
         }

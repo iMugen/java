@@ -41,8 +41,8 @@ public class AccountServiceImpl implements IAccountService{
     }
 
     @Override
-    public void deleteAccount(Integer acccountId) {
-        accountDao.deleteAccount(acccountId);
+    public void deleteAccount(Integer accountId) {
+        accountDao.deleteAccount(accountId);
     }
 
     @Override
