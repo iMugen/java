@@ -3,10 +3,7 @@ package com.itheima.ui;
 import com.itheima.dao.IAccountDao;
 import com.itheima.service.IAccountService;
 import com.itheima.service.IMessageService;
-import org.junit.jupiter.api.Test;
-import org.junit.platform.commons.logging.Logger;
-import org.junit.platform.commons.logging.LoggerFactory;
-import org.springframework.beans.factory.xml.BeanDefinitionParserDelegate;
+import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.util.StringUtils;
@@ -76,9 +73,5 @@ public class Client {
 
         Stream.of(alias.addAll(Arrays.asList(nameArr))).forEach(System.out::println);
 //        Arrays.asList(nameArr).forEach(System.out::println);
-    }
-    @Test
-    public void t2(){
-
     }
 }

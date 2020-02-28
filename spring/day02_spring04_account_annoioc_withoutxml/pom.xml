@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.itheima</groupId>
-    <artifactId>day02_eesy_04account_annoioc_withoutxml</artifactId>
+    <artifactId>day02_spring04_account_annoioc_withoutxml</artifactId>
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
