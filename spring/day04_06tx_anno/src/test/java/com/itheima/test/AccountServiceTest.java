@@ -19,8 +19,7 @@ public class AccountServiceTest {
 
     @Test
     public void testTransfer() {
-        as.transfer("aaa", "bbb", 100f);
-
+        as.transfer("Jin", "Mugen", 100f);
     }
 
 }
