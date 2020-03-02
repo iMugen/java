@@ -11,8 +11,8 @@ import java.util.List;
 /**
  * 账户的业务层实现类
  */
-@Service("accountService")
-public class AccountServiceImpl implements IAccountService{
+@Service( "accountService" )
+public class AccountServiceImpl implements IAccountService {
 
     @Autowired
     private IAccountDao accountDao;
