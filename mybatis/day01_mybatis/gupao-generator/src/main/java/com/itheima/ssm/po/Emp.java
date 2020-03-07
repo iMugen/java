@@ -1,4 +1,4 @@
-package com.itheima.ssm.po;
+package com.imugen.ssm.po;
 
 import java.util.Date;
 

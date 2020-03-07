@@ -68,7 +68,7 @@
     <!-- 配置aop-->
     <aop:config>
         <!-- 配置切入点表达式-->
-        <aop:pointcut id="pt1" expression="execution(* com.itheima.service.impl.*.*(..))"></aop:pointcut>
+        <aop:pointcut id="pt1" expression="execution(* com.imugen.service.impl.*.*(..))"></aop:pointcut>
         <!--建立切入点表达式和事务通知的对应关系 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pt1"></aop:advisor>
     </aop:config>

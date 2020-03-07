@@ -1,6 +1,6 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.service.IMessageService;
+import com.imugen.service.IMessageService;
 
 /**
  * @author Daniel Liu 2020/2/15 13:24

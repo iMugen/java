@@ -1,4 +1,4 @@
-package com.itheima.utils;
+package com.imugen.utils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;

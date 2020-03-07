@@ -27,11 +27,11 @@
                 表达式：
                     访问修饰符  返回值  包名.包名.包名...类名.方法名(参数列表)
                 标准的表达式写法：
-                    public void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                    public void com.imugen.service.impl.AccountServiceImpl.saveAccount()
                 访问修饰符可以省略
-                    void com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                    void com.imugen.service.impl.AccountServiceImpl.saveAccount()
                 返回值可以使用通配符，表示任意返回值
-                    * com.itheima.service.impl.AccountServiceImpl.saveAccount()
+                    * com.imugen.service.impl.AccountServiceImpl.saveAccount()
                 包名可以使用通配符，表示任意包。但是有几级包，就需要写几个*.
                     * *.*.*.*.AccountServiceImpl.saveAccount())
                 包名可以使用..表示当前包及其子包
@@ -49,7 +49,7 @@
 
                 实际开发中切入点表达式的通常写法：
                     切到业务层实现类下的所有方法
-                        * com.itheima.service.impl.*.*(..)
+                        * com.imugen.service.impl.*.*(..)
     -->
 
     <!-- 配置Logger类 -->
@@ -60,7 +60,7 @@
         <!--配置切面 -->
         <aop:aspect id="logAdvice" ref="logger">
             <!-- 配置通知的类型，并且建立通知方法和切入点方法的关联-->
-            <aop:before method="printLog" pointcut="execution(* com.itheima.service.impl.*.*(..))"/>
+            <aop:before method="printLog" pointcut="execution(* com.imugen.service.impl.*.*(..))"/>
         </aop:aspect>
     </aop:config>
 </beans>

@@ -1,4 +1,4 @@
-package com.itheima.proxy;
+package com.imugen.proxy;
 
 /**
  * 一个生产者

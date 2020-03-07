@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
-import com.itheima.domain.Account;
+import com.imugen.domain.Account;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;

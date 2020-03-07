@@ -1,4 +1,4 @@
-package com.itheima.test;
+package com.imugen.test;
 
 import com.baomidou.mybatisplus.enums.IdType;
 import com.baomidou.mybatisplus.generator.AutoGenerator;

@@ -1,7 +1,7 @@
-package com.itheima.controller;
+package com.imugen.controller;
 
-import com.itheima.domain.Account;
-import com.itheima.service.AccountService;
+import com.imugen.domain.Account;
+import com.imugen.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

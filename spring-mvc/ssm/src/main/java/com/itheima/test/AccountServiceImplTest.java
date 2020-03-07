@@ -1,6 +1,6 @@
-package com.itheima.test;
+package com.imugen.test;
 
-import com.itheima.service.AccountService;
+import com.imugen.service.AccountService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

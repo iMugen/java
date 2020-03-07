@@ -1,7 +1,7 @@
-package com.itheima.controller;
+package com.imugen.controller;
 
-import com.itheima.domain.Account;
-import com.itheima.domain.User;
+import com.imugen.domain.Account;
+import com.imugen.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

@@ -1,8 +1,8 @@
-package com.itheima.test;
+package com.imugen.test;
 
-import com.itheima.dao.AccountDao;
-import com.itheima.dao.UserDao;
-import com.itheima.domain.Account;
+import com.imugen.dao.AccountDao;
+import com.imugen.dao.UserDao;
+import com.imugen.domain.Account;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

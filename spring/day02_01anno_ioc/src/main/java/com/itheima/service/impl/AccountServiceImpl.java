@@ -1,7 +1,7 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.service.IAccountService;
+import com.imugen.dao.IAccountDao;
+import com.imugen.service.IAccountService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

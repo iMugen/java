@@ -1,4 +1,4 @@
-package com.itheima.service;
+package com.imugen.service;
 
 /**
  * 账户业务层的接口

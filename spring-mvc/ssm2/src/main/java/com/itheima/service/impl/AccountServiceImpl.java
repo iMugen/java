@@ -1,8 +1,8 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.beans.Account;
-import com.itheima.mapper.AccountMapper;
-import com.itheima.service.AccountService;
+import com.imugen.beans.Account;
+import com.imugen.mapper.AccountMapper;
+import com.imugen.service.AccountService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

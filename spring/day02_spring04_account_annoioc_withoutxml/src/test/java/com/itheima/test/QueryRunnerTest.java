@@ -1,4 +1,4 @@
-package com.itheima.test;
+package com.imugen.test;
 
 import config.SpringConfiguration;
 import org.apache.commons.dbutils.QueryRunner;

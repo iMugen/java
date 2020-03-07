@@ -24,7 +24,7 @@
         如果是用注解配置，此处要用class属性指定备注街的dao全限定类名
     -->
     <mappers>
-        <mapper class="com.itheima.dao.UserDao"/>
+        <mapper class="com.imugen.dao.UserDao"/>
     </mappers>
 
 

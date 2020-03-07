@@ -1,7 +1,7 @@
-package com.itheima.test;
+package com.imugen.test;
 
-import com.itheima.domain.Account;
-import com.itheima.service.IAccountService;
+import com.imugen.domain.Account;
+import com.imugen.service.IAccountService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

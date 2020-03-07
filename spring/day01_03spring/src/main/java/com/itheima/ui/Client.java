@@ -1,8 +1,8 @@
-package com.itheima.ui;
+package com.imugen.ui;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.service.IAccountService;
-import com.itheima.service.IMessageService;
+import com.imugen.dao.IAccountDao;
+import com.imugen.service.IAccountService;
+import com.imugen.service.IMessageService;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

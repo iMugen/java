@@ -20,8 +20,8 @@
               此标签写在aop:aspect标签内部只能当前切面使用。
               它还可以写在aop:aspect外面，此时就变成了所有切面可用
           -->
-        <!--<aop:pointcut id="pt1" expression="execution(* com.itheima.service.impl.*.*(..))"></aop:pointcut>-->
-        <aop:pointcut id="pt1" expression="execution(* com.itheima.service.impl.*.*(..))"></aop:pointcut>
+        <!--<aop:pointcut id="pt1" expression="execution(* com.imugen.service.impl.*.*(..))"></aop:pointcut>-->
+        <aop:pointcut id="pt1" expression="execution(* com.imugen.service.impl.*.*(..))"></aop:pointcut>
         <!--配置切面 -->
         <aop:aspect id="logAdvice" ref="logger">
             <!-- 配置前置通知：在切入点方法执行之前执行

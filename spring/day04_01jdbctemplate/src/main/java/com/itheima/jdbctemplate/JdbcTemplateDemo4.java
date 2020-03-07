@@ -1,7 +1,7 @@
-package com.itheima.jdbctemplate;
+package com.imugen.jdbctemplate;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.domain.Account;
+import com.imugen.dao.IAccountDao;
+import com.imugen.domain.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

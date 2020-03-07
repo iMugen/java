@@ -1,4 +1,4 @@
-package com.itheima.utils;
+package com.imugen.utils;
 
 import javax.sql.DataSource;
 import java.sql.Connection;

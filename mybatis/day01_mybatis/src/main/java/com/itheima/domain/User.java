@@ -1,4 +1,4 @@
-package com.itheima.domain;
+package com.imugen.domain;
 
 /**
  * @author Gakki

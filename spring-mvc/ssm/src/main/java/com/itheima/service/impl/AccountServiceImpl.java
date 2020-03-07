@@ -1,8 +1,8 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.dao.AccountDao;
-import com.itheima.domain.Account;
-import com.itheima.service.AccountService;
+import com.imugen.dao.AccountDao;
+import com.imugen.domain.Account;
+import com.imugen.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

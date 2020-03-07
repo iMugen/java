@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
-import com.itheima.domain.User;
+import com.imugen.domain.User;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;

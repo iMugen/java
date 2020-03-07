@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.dao.AccountDao">
+<mapper namespace="com.imugen.dao.AccountDao">
 
     <!--定义封装account和user的resultMap-->
     <resultMap id="accountUserMap" type="account">
@@ -12,7 +12,7 @@
         <!--一对一的关系映射，配置封装的user内容-->
         <!--select属性指定的内容，查询用户的唯一标识-->
         <!--column属性指定的内容，用户根据id查询时，所需要的参数的值-->
-        <association property="user" column="id" javaType="user" select="com.itheima.dao.UserDao.findOne"></association>
+        <association property="user" column="id" javaType="user" select="com.imugen.dao.UserDao.findOne"></association>
     </resultMap>
 
     <!--查询所有-->

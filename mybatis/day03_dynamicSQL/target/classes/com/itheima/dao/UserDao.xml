@@ -2,14 +2,14 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.dao.UserDao">
+<mapper namespace="com.imugen.dao.UserDao">
 
     <!--配置 查询结构的列名和实体类的属性名的对应关系-->
     <!--自定义结果映射
         id：唯一标识，相当于是给当前的自定义结果集映射起个名字，以便后期查询返回结果
         type：结果集需要封装到哪个javabean
     -->
-    <resultMap id="userMap" type="com.itheima.domain.User">
+    <resultMap id="userMap" type="com.imugen.domain.User">
         <!--主键字段的对应-->
         <id property="userId" column="id"></id>
         <!--非主键的对应-->
@@ -40,7 +40,7 @@
     </select>
 
     <!--根据QueryVo查询用户-->
-    <select id="findByVo" parameterType="com.itheima.domain.QueryVo" resultMap="userMap">
+    <select id="findByVo" parameterType="com.imugen.domain.QueryVo" resultMap="userMap">
         select *
         from user
         where username like #{user.userName}

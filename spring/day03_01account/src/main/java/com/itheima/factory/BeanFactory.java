@@ -1,7 +1,7 @@
-package com.itheima.factory;
+package com.imugen.factory;
 
-import com.itheima.service.IAccountService;
-import com.itheima.utils.TransactionManager;
+import com.imugen.service.IAccountService;
+import com.imugen.utils.TransactionManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

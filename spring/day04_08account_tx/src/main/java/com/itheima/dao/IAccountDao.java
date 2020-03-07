@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
-import com.itheima.domain.Account;
+import com.imugen.domain.Account;
 
 /**
  * 账户的持久层接口

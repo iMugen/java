@@ -1,4 +1,4 @@
-package com.itheima.controller;
+package com.imugen.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;

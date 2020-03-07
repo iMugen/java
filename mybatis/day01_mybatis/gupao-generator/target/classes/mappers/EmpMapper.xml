@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.ssm.mapper.EmpMapper">
-  <resultMap id="BaseResultMap" type="com.itheima.ssm.po.Emp">
+<mapper namespace="com.imugen.ssm.mapper.EmpMapper">
+  <resultMap id="BaseResultMap" type="com.imugen.ssm.po.Emp">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="NAME" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -24,7 +24,7 @@
     delete from emp
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.itheima.ssm.po.Emp">
+  <insert id="insert" parameterType="com.imugen.ssm.po.Emp">
     insert into emp (id, NAME, gender, 
       salary, join_date, dept_id
       )
@@ -32,7 +32,7 @@
       #{salary,jdbcType=DOUBLE}, #{joinDate,jdbcType=DATE}, #{deptId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.itheima.ssm.po.Emp">
+  <insert id="insertSelective" parameterType="com.imugen.ssm.po.Emp">
     insert into emp
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -75,7 +75,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.itheima.ssm.po.Emp">
+  <update id="updateByPrimaryKeySelective" parameterType="com.imugen.ssm.po.Emp">
     update emp
     <set>
       <if test="name != null">
@@ -96,7 +96,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.itheima.ssm.po.Emp">
+  <update id="updateByPrimaryKey" parameterType="com.imugen.ssm.po.Emp">
     update emp
     set NAME = #{name,jdbcType=VARCHAR},
       gender = #{gender,jdbcType=CHAR},

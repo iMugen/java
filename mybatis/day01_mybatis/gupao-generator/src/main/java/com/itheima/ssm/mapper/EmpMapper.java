@@ -1,6 +1,6 @@
-package com.itheima.ssm.mapper;
+package com.imugen.ssm.mapper;
 
-import com.itheima.ssm.po.Emp;
+import com.imugen.ssm.po.Emp;
 
 public interface EmpMapper {
     int deleteByPrimaryKey(Integer id);

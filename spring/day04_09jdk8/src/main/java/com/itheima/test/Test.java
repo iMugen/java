@@ -1,4 +1,4 @@
-package com.itheima.test;
+package com.imugen.test;
 
 import java.lang.reflect.Method;
 

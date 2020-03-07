@@ -1,8 +1,8 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.factory.BeanFactory;
-import com.itheima.service.IAccountService;
+import com.imugen.dao.IAccountDao;
+import com.imugen.factory.BeanFactory;
+import com.imugen.service.IAccountService;
 
 /**
  * 账户的业务层实现类

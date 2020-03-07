@@ -1,7 +1,7 @@
-package com.itheima.ui;
+package com.imugen.ui;
 
-import com.itheima.factory.BeanFactory;
-import com.itheima.service.IAccountService;
+import com.imugen.factory.BeanFactory;
+import com.imugen.service.IAccountService;
 
 /**
  * 模拟一个表现层，用于调用业务层

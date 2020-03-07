@@ -1,6 +1,6 @@
-package com.itheima.service;
+package com.imugen.service;
 
-import com.itheima.beans.Account;
+import com.imugen.beans.Account;
 import com.baomidou.mybatisplus.service.IService;
 
 /**

@@ -1,4 +1,4 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
 /**
  * 账户的持久层接口

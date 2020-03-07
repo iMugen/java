@@ -1,6 +1,6 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.service.IAccountService;
+import com.imugen.service.IAccountService;
 
 import java.util.Arrays;
 import java.util.List;

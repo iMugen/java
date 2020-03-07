@@ -1,6 +1,6 @@
-package com.itheima.mapper;
+package com.imugen.mapper;
 
-import com.itheima.beans.Account;
+import com.imugen.beans.Account;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**

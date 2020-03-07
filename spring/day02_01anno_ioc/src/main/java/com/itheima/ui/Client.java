@@ -1,6 +1,6 @@
-package com.itheima.ui;
+package com.imugen.ui;
 
-import com.itheima.service.IAccountService;
+import com.imugen.service.IAccountService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**

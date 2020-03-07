@@ -1,6 +1,6 @@
-package com.itheima.dao.impl;
+package com.imugen.dao.impl;
 
-import com.itheima.dao.IAccountDao;
+import com.imugen.dao.IAccountDao;
 import org.springframework.stereotype.Repository;
 
 /**

@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
-import com.itheima.domain.User;
+import com.imugen.domain.User;
 import org.apache.ibatis.annotations.*;
 import org.apache.ibatis.mapping.FetchType;
 

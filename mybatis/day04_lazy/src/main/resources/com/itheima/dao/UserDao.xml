@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.dao.UserDao">
+<mapper namespace="com.imugen.dao.UserDao">
 
     <!--定义user的resultMap-->
     <resultMap id="userAccountMap" type="user">
@@ -12,7 +12,7 @@
         <result property="sex" column="sex"></result>
         <result property="address" column="address"></result>
         <!--配置user对象中accounts集合的映射-->
-        <collection property="accounts" ofType="account" select="com.itheima.dao.AccountDao.findAccountByUid" column="id"></collection>
+        <collection property="accounts" ofType="account" select="com.imugen.dao.AccountDao.findAccountByUid" column="id"></collection>
     </resultMap>
 
     <!--查询所有-->

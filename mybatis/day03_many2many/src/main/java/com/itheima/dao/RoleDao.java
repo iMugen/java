@@ -1,6 +1,6 @@
-package com.itheima.dao;
+package com.imugen.dao;
 
-import com.itheima.domain.Role;
+import com.imugen.domain.Role;
 
 import java.util.List;
 

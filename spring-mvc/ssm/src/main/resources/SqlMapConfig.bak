@@ -20,6 +20,6 @@
     <mappers>
         <!-- <mapper class="cn.itcast.dao.AccountDao"/> -->
         <!-- 该包下所有的dao接口都可以使用 -->
-        <package name="com.itheima.dao"/>
+        <package name="com.imugen.dao"/>
     </mappers>
 </configuration>

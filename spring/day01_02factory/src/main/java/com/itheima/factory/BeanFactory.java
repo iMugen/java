@@ -1,4 +1,4 @@
-package com.itheima.factory;
+package com.imugen.factory;
 
 import java.io.InputStream;
 import java.util.Enumeration;

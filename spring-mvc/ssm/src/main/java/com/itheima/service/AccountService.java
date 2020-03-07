@@ -1,6 +1,6 @@
-package com.itheima.service;
+package com.imugen.service;
 
-import com.itheima.domain.Account;
+import com.imugen.domain.Account;
 
 import java.util.List;
 

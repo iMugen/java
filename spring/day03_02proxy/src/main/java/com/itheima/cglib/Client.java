@@ -1,4 +1,4 @@
-package com.itheima.cglib;
+package com.imugen.cglib;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;

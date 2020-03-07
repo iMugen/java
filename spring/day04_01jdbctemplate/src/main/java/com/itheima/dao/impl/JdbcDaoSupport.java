@@ -1,4 +1,4 @@
-package com.itheima.dao.impl;
+package com.imugen.dao.impl;
 
 /**
  * 此类用于抽取dao中的重复代码

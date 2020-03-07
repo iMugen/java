@@ -1,4 +1,4 @@
-package com.itheima.oracle;
+package com.imugen.oracle;
 
 import oracle.jdbc.OracleTypes;
 import org.junit.Test;

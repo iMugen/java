@@ -1,4 +1,4 @@
-package com.itheima.proxy;
+package com.imugen.proxy;
 
 /**
  * 对生产厂家要求的接口

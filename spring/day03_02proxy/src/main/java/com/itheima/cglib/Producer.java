@@ -1,4 +1,4 @@
-package com.itheima.cglib;
+package com.imugen.cglib;
 
 /**
  * 一个生产者

@@ -1,9 +1,9 @@
-package com.itheima.service.impl;
+package com.imugen.service.impl;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.domain.Account;
-import com.itheima.service.IAccountService;
-import com.itheima.utils.TransactionManager;
+import com.imugen.dao.IAccountDao;
+import com.imugen.domain.Account;
+import com.imugen.service.IAccountService;
+import com.imugen.utils.TransactionManager;
 
 import java.util.List;
 

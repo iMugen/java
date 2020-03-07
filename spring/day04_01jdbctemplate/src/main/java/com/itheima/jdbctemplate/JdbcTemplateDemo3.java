@@ -1,6 +1,6 @@
-package com.itheima.jdbctemplate;
+package com.imugen.jdbctemplate;
 
-import com.itheima.domain.Account;
+import com.imugen.domain.Account;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;

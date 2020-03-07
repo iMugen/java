@@ -1,4 +1,4 @@
-package com.itheima.jdbctemplate;
+package com.imugen.jdbctemplate;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

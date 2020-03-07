@@ -1,6 +1,6 @@
-package com.itheima.ssm.mapper;
+package com.imugen.ssm.mapper;
 
-import com.itheima.ssm.po.Stu;
+import com.imugen.ssm.po.Stu;
 
 public interface StuMapper {
     int deleteByPrimaryKey(Integer id);

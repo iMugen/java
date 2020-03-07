@@ -1,7 +1,7 @@
-package com.itheima.dao.impl;
+package com.imugen.dao.impl;
 
-import com.itheima.dao.IAccountDao;
-import com.itheima.domain.Account;
+import com.imugen.dao.IAccountDao;
+import com.imugen.domain.Account;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;

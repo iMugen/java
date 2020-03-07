@@ -1,4 +1,4 @@
-package com.itheima.domain;
+package com.imugen.domain;
 
 import java.util.Date;
 
