@@ -1,14 +1,9 @@
-package guava.utilities;
+package com.wangwenjun.guava.utilities;
 
 import com.google.common.base.Splitter;
 import org.junit.Test;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -16,7 +11,6 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertThat;
@@ -105,11 +99,12 @@ public class SplitterTest {
 
     @Test
     public void testSplitOnSplitToMap() {
-        Map<String, String> result = Splitter.on(Pattern.compile("\\|")).trimResults().omitEmptyStrings().withKeyValueSeparator("=").split("hello=HELLO| world=WORLD|||");
+        Map<String, String> result = Splitter.on(Pattern.compile("\\|")).trimResults()
+                .omitEmptyStrings().withKeyValueSeparator("=").split("hello=HELLO| world=WORLD|||");
         assertThat(result, notNullValue());
         assertThat(result.size(), equalTo(2));
-        assertThat(result.get("hello"), equalTo("HELLO"));
-        assertThat(result.get("world"), equalTo("WORLD"));
+        assertThat(result.get("hello"),equalTo("HELLO"));
+        assertThat(result.get("world"),equalTo("WORLD"));
     }
 
     @Test
@@ -135,17 +130,5 @@ public class SplitterTest {
         if (matcher.find()) {
             System.out.println("group() =" + Arrays.toString(matcher.group().replace("(", "").replace(")", "").split(",")));
         }
-    }
-
-    @Test
-    public void string() {
-//        System.out.println("LocalDateTime.now() = " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
-//        System.out.println("LocalDateTime.now().getNano() = " + LocalDateTime.now().getNano());
-//        System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-//        System.out.println("Instant.now().getNano() = " + Instant.now().getNano());
-//        String s = "hhxxx新垣结衣、石原里美";
-//        assertThat(s.contains("石原里美"), is(true));
-//        assertThat(LocalDateTime.now(),equalTo(new Date()));
-//        System.out.println(LocalDateTime.of(2020,3,12,10,40).format(DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")));
     }
 }
