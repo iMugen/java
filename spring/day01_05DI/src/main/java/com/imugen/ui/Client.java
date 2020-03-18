@@ -24,6 +24,5 @@ public class Client {
 
         IAccountService as = (IAccountService) ac.getBean("accountService3");
         as.saveAccount();
-
     }
 }

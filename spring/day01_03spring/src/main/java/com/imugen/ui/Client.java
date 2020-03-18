@@ -43,11 +43,11 @@ public class Client {
 //        ApplicationContext ac = new FileSystemXmlApplicationContext("C:\\Users\\zhy\\Desktop\\bean.xml");
         //2.根据id获取Bean对象
         IAccountService as = (IAccountService) ac.getBean("accountService");
-        IAccountDao adao = ac.getBean("accountDao", IAccountDao.class);
+        IAccountDao dao = ac.getBean("accountDao", IAccountDao.class);
 //        System.out.println(ac.getBean(IMessageService.class).getMessage());
 
         System.out.println(as);
-        System.out.println(adao);
+        System.out.println(dao);
 //        as.saveAccount();
 
 
