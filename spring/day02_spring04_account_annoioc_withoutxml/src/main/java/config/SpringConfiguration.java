@@ -15,7 +15,7 @@ import org.springframework.context.annotation.PropertySource;
  *      属性：
  *          value：它和basePackages的作用是一样的，都是用于指定创建容器时要扫描的包。
  *                 我们使用此注解就等同于在xml中配置了:
- *                      <context:component-scan base-package="com.itheima"></context:component-scan>
+ *                      <context:component-scan base-package="com.imugen"></context:component-scan>
  *  Bean
  *      作用：用于把当前方法的返回值作为bean对象存入spring的ioc容器中
  *      属性:
@@ -35,7 +35,7 @@ import org.springframework.context.annotation.PropertySource;
  *                  关键字：classpath，表示类路径下
  */
 //@Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.imugen")
 @Import(JdbcConfig.class)
 @PropertySource("classpath:jdbcConfig.properties")
 public class SpringConfiguration {

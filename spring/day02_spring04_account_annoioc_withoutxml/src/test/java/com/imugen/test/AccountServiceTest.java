@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.stream.Stream;
-
 /**
  * 使用Junit单元测试：测试我们的配置
  * Spring整合junit的配置
@@ -30,7 +28,6 @@ public class AccountServiceTest {
     @Autowired
     private IAccountService as = null;
 
-
     @Test
     public void testFindAll() {
         //3.执行方法
@@ -38,7 +35,8 @@ public class AccountServiceTest {
 //        for(Account account : accounts){
 //            System.out.println(account);
 //        }
-        Stream.of(as.findAllAccount()).forEach(System.out::println);
+//        Stream.of(as.findAllAccount()).forEach(System.out::println);
+        as.findAllAccount().forEach(System.out::println);
     }
 
     @Test
