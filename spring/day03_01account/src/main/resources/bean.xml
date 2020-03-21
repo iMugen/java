@@ -8,7 +8,7 @@
     <bean id="proxyAccountService" factory-bean="beanFactory" factory-method="getAccountService"/>
 
     <!--配置beanfactory-->
-    <bean id="beanFactory" class="com.itheima.factory.BeanFactory">
+    <bean id="beanFactory" class="com.imugen.factory.BeanFactory">
         <!-- 注入service -->
         <property name="accountService" ref="accountService"/>
         <!-- 注入事务管理器 -->
@@ -16,13 +16,13 @@
     </bean>
 
     <!-- 配置Service -->
-    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl">
+    <bean id="accountService" class="com.imugen.service.impl.AccountServiceImpl">
         <!-- 注入dao -->
         <property name="accountDao" ref="accountDao"/>
     </bean>
 
     <!--配置Dao对象-->
-    <bean id="accountDao" class="com.itheima.dao.impl.AccountDaoImpl">
+    <bean id="accountDao" class="com.imugen.dao.impl.AccountDaoImpl">
         <!-- 注入QueryRunner -->
         <property name="runner" ref="runner"/>
         <!-- 注入ConnectionUtils -->
@@ -42,13 +42,13 @@
     </bean>
 
     <!-- 配置Connection的工具类 ConnectionUtils -->
-    <bean id="connectionUtils" class="com.itheima.utils.ConnectionUtils">
+    <bean id="connectionUtils" class="com.imugen.utils.ConnectionUtils">
         <!-- 注入数据源-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
     <!-- 配置事务管理器-->
-    <bean id="txManager" class="com.itheima.utils.TransactionManager">
+    <bean id="txManager" class="com.imugen.utils.TransactionManager">
         <!-- 注入ConnectionUtils -->
         <property name="connectionUtils" ref="connectionUtils"/>
     </bean>
