@@ -20,7 +20,6 @@ public class BeanFactory {
         this.txManager = txManager;
     }
 
-
     public final void setAccountService(IAccountService accountService) {
         this.accountService = accountService;
     }
