@@ -4,6 +4,7 @@ import com.imugen.service.IAccountService;
 
 /**
  * 账户的业务层实现类
+ * @author Mugen
  */
 public class AccountServiceImpl implements IAccountService{
 
