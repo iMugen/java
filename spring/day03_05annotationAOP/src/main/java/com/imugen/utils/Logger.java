@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 
 /**
  * 用于记录日志的工具类，它里面提供了公共的代码
+ * @author Mugen
  */
 @Component("logger")
 @Aspect//表示当前类是一个切面类
 public class Logger {
 
-    @Pointcut("execution(* com.itheima.service.impl.*.*(..))")
+    @Pointcut("execution(* com.imugen.service.impl.*.*(..))")
     private void pt1(){}
 
     /**
