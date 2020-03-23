@@ -37,7 +37,7 @@ public class Client {
          *          此接口的实现类都是谁用谁写。
          *          我们一般写的都是该接口的子接口实现类：MethodInterceptor
          */
-        Producer cglibProducer = (Producer)Enhancer.create(producer.getClass(), new MethodInterceptor() {
+        Producer cglibProducer = (Producer) Enhancer.create(producer.getClass(), new MethodInterceptor() {
             /**
              * 执行北地阿里对象的任何方法都会经过该方法
              * @param proxy
@@ -54,10 +54,10 @@ public class Client {
                 Object returnValue = null;
 
                 //1.获取方法执行的参数
-                Float money = (Float)args[0];
+                Float money = (Float) args[0];
                 //2.判断当前方法是不是销售
-                if("saleProduct".equals(method.getName())) {
-                    returnValue = method.invoke(producer, money*0.8f);
+                if ("saleProduct".equals(method.getName())) {
+                    returnValue = method.invoke(producer, money * 0.8f);
                 }
                 return returnValue;
             }
