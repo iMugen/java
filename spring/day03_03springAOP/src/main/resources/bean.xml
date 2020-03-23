@@ -7,8 +7,8 @@
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!-- 配置srping的Ioc,把service对象配置进来-->
-    <bean id="accountService" class="com.itheima.service.impl.AccountServiceImpl"/>
+    <!-- 配置spring的ioc,把service对象配置进来-->
+    <bean id="accountService" class="com.imugen.service.impl.AccountServiceImpl"/>
 
     <!--spring中基于XML的AOP配置步骤
         1、把通知Bean也交给spring来管理
@@ -53,7 +53,7 @@
     -->
 
     <!-- 配置Logger类 -->
-    <bean id="logger" class="com.itheima.utils.log.Logger"/>
+    <bean id="logger" class="com.imugen.utils.Logger"/>
 
     <!--配置AOP-->
     <aop:config>
