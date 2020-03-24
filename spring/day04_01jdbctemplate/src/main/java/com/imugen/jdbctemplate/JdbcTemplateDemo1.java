@@ -1,15 +1,7 @@
 package com.imugen.jdbctemplate;
 
-import com.imugen.domain.Account;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
-import javax.sql.DataSource;
-import java.util.List;
-import java.util.stream.Stream;
 
 /**
  * JdbcTemplate的最基本用法
@@ -22,7 +14,7 @@ public class JdbcTemplateDemo1 {
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUrl("jdbc:mysql://localhost:3306/eesy");
         ds.setUsername("root");
-        ds.setPassword("1234");
+        ds.setPassword("root");
 
         //1.创建JdbcTemplate对象
         JdbcTemplate jt = new JdbcTemplate();
@@ -30,6 +22,5 @@ public class JdbcTemplateDemo1 {
         jt.setDataSource(ds);
         //2.执行操作
         jt.execute("insert into account(name,money)values('ccc',1000)");
-
     }
 }
