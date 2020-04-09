@@ -20,13 +20,10 @@ public class AccountServiceImpl implements IAccountService {
     @Autowired
     private IAccountDao accountDao;
 
-
     @Override
     public Account findAccountById(Integer accountId) {
         return accountDao.findAccountById(accountId);
-
     }
-
 
     //需要的是读写型事务配置
     @Transactional( propagation = Propagation.REQUIRED, readOnly = false )
@@ -44,7 +41,7 @@ public class AccountServiceImpl implements IAccountService {
         //2.5更新转出账户
         accountDao.updateAccount(source);
 
-            int i=1/0;
+        int i = 1 / 0;
 
         //2.6更新转入账户
         accountDao.updateAccount(target);
