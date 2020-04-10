@@ -29,7 +29,7 @@ public class AccountServiceImpl implements IAccountService {
     @Transactional( propagation = Propagation.REQUIRED, readOnly = false )
     @Override
     public void transfer(String sourceName, String targetName, Float money) {
-        System.out.println("transfer....");
+        System.out.println("transfer......");
         //2.1根据名称查询转出账户
         Account source = accountDao.findAccountByName(sourceName);
         //2.2根据名称查询转入账户
