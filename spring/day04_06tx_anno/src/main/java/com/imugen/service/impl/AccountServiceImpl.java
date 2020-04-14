@@ -25,7 +25,7 @@ public class AccountServiceImpl implements IAccountService {
         return accountDao.findAccountById(accountId);
     }
 
-    //需要的是读写型事务配置
+    //需要的是读写型事务配置.
     @Transactional( propagation = Propagation.REQUIRED, readOnly = false )
     @Override
     public void transfer(String sourceName, String targetName, Float money) {
