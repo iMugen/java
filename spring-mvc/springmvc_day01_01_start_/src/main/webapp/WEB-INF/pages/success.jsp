@@ -12,11 +12,9 @@
 </head>
 <body>
 
-    <h3>入门成功</h3>
+<h3>入门成功</h3>
 
-    ${ msg }
-
-    ${sessionScope}
-
+${ msg }
+${sessionScope.age}
 </body>
 </html>
