@@ -77,7 +77,7 @@ public class AnnoController {
     }
 
     /**
-     * ModelAttribute注解
+     * ModelAttribute注解1
      * @return
      */
     @RequestMapping(value="/testModelAttribute")
