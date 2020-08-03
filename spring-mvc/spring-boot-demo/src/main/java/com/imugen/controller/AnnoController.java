@@ -11,10 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.swing.text.html.Option;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * 常用的注解
@@ -42,6 +39,7 @@ public class AnnoController {
 
     public static void main(String[] args) {
         testNull(null);
+//        System.out.println(Collections.emptyList());
 
     }
     public static void testNull(User user){
@@ -49,7 +47,9 @@ public class AnnoController {
         //判断非空Objects.requireNonNull(after);   Objects.nonNull(Object obj);
         //返回集合时返回空集合不要返回null：if(CollectionUtils.isEmpty(userList)){
         //return Lists.newArrayList();//guava类库提供的方式}
-        Objects.nonNull(user);
+        assert user != null;
+        Objects.requireNonNull(user,"user is null");
+        System.out.println("user = " + user );
         System.out.println(user.getUname());
     }
 
