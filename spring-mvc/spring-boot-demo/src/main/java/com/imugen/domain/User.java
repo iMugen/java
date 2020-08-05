@@ -5,8 +5,18 @@ import java.util.Date;
 
 public class User implements Serializable{
 
+
+    private Integer id;
     private String uname;
     private Integer age;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getUname() {
         return uname;
@@ -22,10 +32,5 @@ public class User implements Serializable{
 
     public void setAge(Integer age) {
         this.age = age;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" + "uname='" + uname + '\'' + ", age=" + age + '}';
     }
 }

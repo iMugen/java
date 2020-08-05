@@ -12,23 +12,40 @@ import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * @author Liuqiang 2020/8/3 9:04
  */
 public class GenerateDoc {
-    @Test
-    public void shouldAnswerWithTrue() {
+    public static void main(String[] args) {
+//        List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
+        List<String> list = Arrays.asList("c", "test", "test1");
+
+        IntStream.range(0, list.size()).forEach(i -> {
+            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            System.out.println("str = " + connConfig);
+            shouldAnswerWithTrue(connConfig);
+        });
+
+    }
+
+//    @Test
+    public static void shouldAnswerWithTrue(String connConfig) {
         //数据源
         HikariConfig hikariConfig = new HikariConfig();
         hikariConfig.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/c?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-//        hikariConfig.setJdbcUrl("jdbc:mysql://localhost:3306/xc_course?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+
+        hikariConfig.setJdbcUrl(connConfig);
         hikariConfig.setUsername("root");
         hikariConfig.setPassword("root");
-//        hikariConfig.setJdbcUrl("jdbc:mysql://fscloud-middle-platform-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/fscloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-//        hikariConfig.setUsername("fscloud");
-//        hikariConfig.setPassword("46i&jrfeg5tseI&k7#qtjKI(*^*ke");
+/*
+        hikariConfig.setJdbcUrl("jdbc:mysql://fscloud-middle-platform-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/fscloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
+        hikariConfig.setUsername("fscloud");
+        hikariConfig.setPassword("46i&jrfeg5tseI&k7#qtjKI(*^*ke");
+*/
 
         //设置可以获取tables remarks信息
         hikariConfig.addDataSourceProperty("useInformationSchema", "true");
@@ -41,7 +58,7 @@ public class GenerateDoc {
                 .fileOutputDir("/Users/database-test")
                 //打开目录
                 .openOutputDir(true)
-                //文件类型
+                //文件类型 word/html/markdown
                 .fileType(EngineFileType.HTML)
                 //生成模板实现
                 .produceType(EngineTemplateType.freemarker).build();
