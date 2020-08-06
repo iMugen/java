@@ -8,7 +8,6 @@ import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import org.junit.jupiter.api.Test;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class GenerateDoc {
 
     }
 
-//    @Test
+    //    @Test
     public static void shouldAnswerWithTrue(String connConfig) {
         //数据源
         HikariConfig hikariConfig = new HikariConfig();
@@ -58,8 +57,8 @@ public class GenerateDoc {
                 .fileOutputDir("/Users/database-test")
                 //打开目录
                 .openOutputDir(true)
-                //文件类型 word/html/markdown
-                .fileType(EngineFileType.HTML)
+                //文件类型 HTML/WORD/MD
+                .fileType(EngineFileType.MD)
                 //生成模板实现
                 .produceType(EngineTemplateType.freemarker).build();
         //忽略表
