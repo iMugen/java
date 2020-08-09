@@ -21,7 +21,7 @@ import java.util.stream.IntStream;
 public class GenerateDoc {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
-//        List<String> list = Arrays.asList("c", "test", "test1");11
+//        List<String> list = Arrays.asList("c", "test", "test1");
 
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
