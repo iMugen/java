@@ -1,5 +1,7 @@
 package com.imugen;
 
+import cn.hutool.cron.CronUtil;
+import cn.hutool.cron.task.Task;
 import cn.smallbun.screw.core.Configuration;
 import cn.smallbun.screw.core.engine.EngineConfig;
 import cn.smallbun.screw.core.engine.EngineFileType;
@@ -8,6 +10,7 @@ import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.sql.DataSource;
 import java.util.ArrayList;
@@ -18,8 +21,35 @@ import java.util.stream.IntStream;
 /**
  * @author Liuqiang 2020/8/3 9:04
  */
+@Slf4j
 public class GenerateDoc {
-    public static void main(String[] args) {
+
+
+    public static void main(String[] args) throws InterruptedException {
+        CronUtil.schedule("*/7 * * * * *", (Task) GenerateDoc::generateDocTack);
+
+        // 支持秒级别定时任务
+        CronUtil.setMatchSecond(true);
+        CronUtil.start();
+        Thread.sleep(20000);
+        CronUtil.stop();
+    }
+
+
+    public static void generateDocTack() {
+        List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
+//        List<String> list = Arrays.asList("c", "test", "test1");
+
+        IntStream.range(0, list.size()).forEach(i -> {
+//            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+//            System.out.println("str = " + connConfig);
+            shouldAnswerWithTrue(connConfig);
+        });
+
+    }
+
+    /*public static void main(String[] args) {
         List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
 //        List<String> list = Arrays.asList("c", "test", "test1");111
 
@@ -30,7 +60,7 @@ public class GenerateDoc {
             shouldAnswerWithTrue(connConfig);
         });
 
-    }
+    }*/
 
     //        @Test
     public static void shouldAnswerWithTrue(String connConfig) {
