@@ -10,13 +10,12 @@ import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
-import lombok.extern.slf4j.Slf4j;
-
-import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
+import javax.sql.DataSource;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Liuqiang 2020/8/3 9:04
@@ -26,19 +25,22 @@ public class GenerateDoc {
 
 
     public static void main(String[] args) throws InterruptedException {
-        CronUtil.schedule("*/7 * * * * *", (Task) GenerateDoc::generateDocTack);
+        CronUtil.schedule("*/1 * * * * *", (Task) GenerateDoc::generateDocTack);
 
         // 支持秒级别定时任务
         CronUtil.setMatchSecond(true);
         CronUtil.start();
-        Thread.sleep(20000);
+        Thread.sleep(1000);
         CronUtil.stop();
     }
 
 
 
     public static void generateDocTack() {
-        List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
+        List<String> list = Arrays
+                .asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise",
+                        "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
+                        "fscloud-service-user-admin", "fscloud-service-user-platform");
 //        List<String> list = Arrays.asList("c", "test", "test1");
 
         IntStream.range(0, list.size()).forEach(i -> {

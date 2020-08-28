@@ -29,7 +29,7 @@ public class AnnoController {
         System.out.println("username = " + username);
         System.out.println("tenantId = " + tenantId );
         return cIds;
-//        System.out.println(httpServletRequest.getRequestURL());111
+//        System.out.println(httpServletRequest.getRequestURL());
 //        System.out.println(httpServletRequest.getQueryString());
 //        System.out.println("执行了...");
 //        System.out.println(username);
