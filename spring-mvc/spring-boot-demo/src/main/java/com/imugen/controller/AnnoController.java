@@ -31,7 +31,7 @@ public class AnnoController {
         return cIds;
 //        System.out.println(httpServletRequest.getRequestURL());
 //        System.out.println(httpServletRequest.getQueryString());
-//        System.out.println("执行了...");
+//        System.out.println("执行了...");11
 //        System.out.println(username);
 //        System.out.println("user = " + user );
 //        return user;
