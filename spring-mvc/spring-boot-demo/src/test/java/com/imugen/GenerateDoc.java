@@ -86,7 +86,7 @@ public class GenerateDoc {
         //生成配置
         EngineConfig engineConfig = EngineConfig.builder()
                 //生成文件路径
-                .fileOutputDir("/Users/database-test")
+                .fileOutputDir("C:\\Users\\Daniel\\Documents\\database-test")
                 //打开目录
                 .openOutputDir(true)
                 //文件类型 HTML/WORD/MD

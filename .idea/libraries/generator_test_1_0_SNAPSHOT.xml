@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="generator_test-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mybatis/day01_mybatis/generator_test/target/generator_test-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

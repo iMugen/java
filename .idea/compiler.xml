@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="design_pattern" />
+        <module name="guava" />
+        <module name="Guava_Programming" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="design_pattern" target="8" />
+      <module name="guava" target="11" />
+      <module name="Guava_Programming" target="1.8" />
+      <module name="java" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="guava" options="" />
+    </option>
+  </component>
+</project>

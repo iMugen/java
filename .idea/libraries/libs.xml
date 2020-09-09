@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/spring-beans-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/spring-core-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/c3p0-0.9.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/mchange-commons-java-0.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/druid-1.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/spring-jdbc-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/spring-tx-5.0.0.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/JsoupXpath-0.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/jsoup-1.11.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/javaweb/test/libs/mysql-connector-java-5.1.37-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

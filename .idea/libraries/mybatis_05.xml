@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mybatis-05">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mybatis/day01_mybatis/gupao-generator/target/mybatis-05.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
