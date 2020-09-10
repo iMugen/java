@@ -41,12 +41,10 @@ public class GenerateDoc {
                 .asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise",
                         "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
                         "fscloud-service-user-admin", "fscloud-service-user-platform");
-//        List<String> list = Arrays.asList("c", "test", "test1");
 
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-//            System.out.println("str = " + connConfig);
             shouldAnswerWithTrue(connConfig);
         });
 
