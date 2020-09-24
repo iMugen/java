@@ -58,7 +58,7 @@ public class GenerateDoc {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             System.out.println("str = " + connConfig);
-            shouldAnswerWithTrue(connConfig);11
+            shouldAnswerWithTrue(connConfig);
         });
 
     }*/
