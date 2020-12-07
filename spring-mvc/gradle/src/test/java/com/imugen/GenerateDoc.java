@@ -9,15 +9,12 @@ import cn.smallbun.screw.core.engine.EngineFileType;
 import cn.smallbun.screw.core.engine.EngineTemplateType;
 import cn.smallbun.screw.core.execute.DocumentationExecute;
 import cn.smallbun.screw.core.process.ProcessConfig;
-import com.imugen.domain.TaxLine;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -50,20 +47,15 @@ public class GenerateDoc {
      * 数据库生成doc文档
      */
     public static void generateDocTack() {
-//        List<String> list = asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise",
-//                        "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
-//                        "fscloud-service-user-admin", "fscloud-service-user-platform");
-        List<String> list = asList("business_rectification", "business_info_tmp", "business_info");
+        List<String> list = asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise",
+                        "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
+                        "fscloud-service-user-admin", "fscloud-service-user-platform");
+
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             shouldAnswerWithTrue(connConfig);
         });
-
-
-
-
-
 
     }
 

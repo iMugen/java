@@ -27,6 +27,7 @@ public class HelloController {
 
     @GetMapping("/num")
     public int getNum(){
+
         return 3000;
     }
 }
