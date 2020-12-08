@@ -14,10 +14,8 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import java.math.BigDecimal;
 import java.util.*;
-import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 import javax.sql.DataSource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -32,7 +30,9 @@ import org.openjdk.jmh.annotations.Mode;
 public class GenerateDoc {
 
 
-    /**哈哈哈
+    /**
+     * 哈哈哈
+     *
      * @param args
      * @throws InterruptedException
      */
@@ -56,91 +56,12 @@ public class GenerateDoc {
         List<String> list = asList("business_rectification", "business_info_tmp", "business_info");
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i)
+                    + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             shouldAnswerWithTrue(connConfig);
         });
 
 
-
-
-
-
-    }
-
-    @Test
-    void groupingByTest() {
-        TaxLine t1 = new TaxLine("New York Tax", new BigDecimal("0.20"), new BigDecimal("20.00"));
-        TaxLine t2 = new TaxLine("New York Tax", new BigDecimal("0.20"), new BigDecimal("20.00"));
-        TaxLine t3 = new TaxLine("County Tax", new BigDecimal("0.30"), new BigDecimal("20.00"));
-        List<TaxLine> taxes = new ArrayList<>();
-        taxes.add(t1);
-        taxes.add(t2);
-        taxes.add(t3);
-        List<TaxLine> flattened = taxes.stream()
-                .collect(Collectors.groupingBy(
-                        TaxLine::getTitle,
-                        Collectors.groupingBy(
-                                TaxLine::getRate,
-                                Collectors.reducing(
-                                        BigDecimal.ZERO,
-                                        TaxLine::getPrice,
-                                        BigDecimal::add))))
-                .entrySet()
-                .stream()
-                .flatMap(e1 -> e1.getValue()
-                        .entrySet()
-                        .stream()
-                        .map(e2 -> new TaxLine(e1.getKey(), e2.getKey(), e2.getValue())))
-                .collect(Collectors.toList());
-        flattened.forEach(System.out::println);
-
-    }
-
-    @Test
-    void n() {
-        List<List<String>> nestedList = asList(
-                asList("one:one"),
-                asList("two:one", "two:two", "two:three"),
-                asList("three:one", "three:two", "three:three", "three:four"));
-        List<String> collect = nestedList.stream().flatMap(Collection::stream).collect(Collectors.toList());
-        collect.forEach(System.out::println);
-
-
-    }
-
-    /*public static void main(String[] args) {
-                    List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
-            //        List<String> list = Arrays.asList("c", "test", "test1");111
-
-                    IntStream.range(0, list.size()).forEach(i -> {
-            //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-                        String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-                        System.out.println("str = " + connConfig);
-                        shouldAnswerWithTrue(connConfig);
-                    });
-
-                }*/
-    @Benchmark
-    @BenchmarkMode(Mode.AverageTime)
-    public String orElseBenchmark() {
-        String str=null;
-//        return Optional.ofNullable(str).orElse(getRandomName());
-        return Optional.ofNullable(str).orElseGet(()->getRandomName());
-    }
-    public String getRandomName() {
-        List<String> names = asList("hh", "xixi", "la", "lin");
-        System.out.println("getRandomName() method - start");
-
-        Random random = new Random();
-        int index = random.nextInt(4);
-
-        System.out.println("getRandomName() method - end");
-        return names.get(index);
-    }
-    @Test
-    void name() {
-        String s = orElseBenchmark();
-        System.out.println("s = " + s );
     }
 
     //        @Test
@@ -202,6 +123,84 @@ public class GenerateDoc {
                 .produceConfig(processConfig).build();
         //执行生成
         new DocumentationExecute(config).execute();
+    }
+
+    @Test
+    void groupingByTest() {
+        TaxLine t1 = new TaxLine("New York Tax", new BigDecimal("0.20"), new BigDecimal("20.00"));
+        TaxLine t2 = new TaxLine("New York Tax", new BigDecimal("0.20"), new BigDecimal("20.00"));
+        TaxLine t3 = new TaxLine("County Tax", new BigDecimal("0.30"), new BigDecimal("20.00"));
+        List<TaxLine> taxes = new ArrayList<>();
+        taxes.add(t1);
+        taxes.add(t2);
+        taxes.add(t3);
+        List<TaxLine> flattened = taxes.stream()
+                .collect(Collectors.groupingBy(
+                        TaxLine::getTitle,
+                        Collectors.groupingBy(
+                                TaxLine::getRate,
+                                Collectors.reducing(
+                                        BigDecimal.ZERO,
+                                        TaxLine::getPrice,
+                                        BigDecimal::add))))
+                .entrySet()
+                .stream()
+                .flatMap(e1 -> e1.getValue()
+                        .entrySet()
+                        .stream()
+                        .map(e2 -> new TaxLine(e1.getKey(), e2.getKey(), e2.getValue())))
+                .collect(Collectors.toList());
+        flattened.forEach(System.out::println);
+
+    }
+
+    @Test
+    void n() {
+        List<List<String>> nestedList = asList(
+                asList("one:one"),
+                asList("two:one", "two:two", "two:three"),
+                asList("three:one", "three:two", "three:three", "three:four"));
+        List<String> collect = nestedList.stream().flatMap(Collection::stream).collect(Collectors.toList());
+        collect.forEach(System.out::println);
+
+
+    }
+
+    /*public static void main(String[] args) {
+                    List<String> list = Arrays.asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise", "fscloud-service-tenant", "fscloud-service-trade");
+            //        List<String> list = Arrays.asList("c", "test", "test1");111
+
+                    IntStream.range(0, list.size()).forEach(i -> {
+            //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+                        String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+                        System.out.println("str = " + connConfig);
+                        shouldAnswerWithTrue(connConfig);
+                    });
+
+                }*/
+    @Benchmark
+    @BenchmarkMode(Mode.AverageTime)
+    public String orElseBenchmark() {
+        String str = null;
+//        return Optional.ofNullable(str).orElse(getRandomName());
+        return Optional.ofNullable(str).orElseGet(() -> getRandomName());
+    }
+
+    public String getRandomName() {
+        List<String> names = asList("hh", "xixi", "la", "lin");
+        System.out.println("getRandomName() method - start");
+
+        Random random = new Random();
+        int index = random.nextInt(4);
+
+        System.out.println("getRandomName() method - end");
+        return names.get(index);
+    }
+
+    @Test
+    void name() {
+        String s = orElseBenchmark();
+        System.out.println("s = " + s);
     }
 
 }
