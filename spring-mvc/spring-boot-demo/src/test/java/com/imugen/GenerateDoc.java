@@ -53,10 +53,12 @@ public class GenerateDoc {
 //        List<String> list = asList("fscloud", "fscloud-product-eye-demo", "fscloud-service-area", "fscloud-service-enterprise",
 //                        "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
 //                        "fscloud-service-user-admin", "fscloud-service-user-platform");
-        List<String> list = asList("business_rectification", "business_info_tmp", "business_info");
+        List<String> list = asList("open_shop_dynamicfrom","open_shop_foundation","open_shop_legal_person","open_shop_management","open_shop_merchandise","open_shop_order","nacos");
+
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i)
+//            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i)
+            String connConfig = "jdbc:mysql://47.108.59.71:3306/" + list.get(i)
                     + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             shouldAnswerWithTrue(connConfig);
         });
@@ -74,8 +76,11 @@ public class GenerateDoc {
 //        hikariConfig.setUsername("root");
 //        hikariConfig.setPassword("root");
 //        hikariConfig.setJdbcUrl("jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/fscloud?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-        hikariConfig.setUsername("fscloud");
-        hikariConfig.setPassword("46i&jrfeg5tseI&k7#qtjKI(*^*ke");
+//        hikariConfig.setUsername("fscloud");
+//        hikariConfig.setPassword("46i&jrfeg5tseI&k7#qtjKI(*^*ke");
+        //开店宝test分支
+        hikariConfig.setUsername("root");
+        hikariConfig.setPassword("u9ABW3U4");
 
         //设置可以获取tables remarks信息
         hikariConfig.addDataSourceProperty("useInformationSchema", "true");
