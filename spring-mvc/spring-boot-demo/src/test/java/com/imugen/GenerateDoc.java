@@ -31,7 +31,6 @@ public class GenerateDoc {
 
 
     /**
-     *
      * @param args
      * @throws InterruptedException
      */
