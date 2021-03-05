@@ -52,7 +52,6 @@ public class GenerateDoc {
 //                        "fscloud-service-message", "fscloud-service-tenant", "fscloud-service-trade",
 //                        "fscloud-service-user-admin", "fscloud-service-user-platform");
         List<String> list = asList("open_shop_dynamicfrom","open_shop_foundation","open_shop_legal_person","open_shop_management","open_shop_merchandise","open_shop_order","nacos");
-//nothing
         IntStream.range(0, list.size()).forEach(i -> {
 //            String connConfig = "jdbc:mysql://localhost:3306/" + list.get(i) + "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 //            String connConfig = "jdbc:mysql://fscloud-middle-outter-test.mysql.cn-chengdu.rds.aliyuncs.com:3306/" + list.get(i)
